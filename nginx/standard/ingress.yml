@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: standard-nginx-ingress
+spec:
+  rules:
+  - host: efc.olst.io
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: standard-nginx-service
+          servicePort: 80

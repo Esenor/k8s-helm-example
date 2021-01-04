@@ -1,0 +1,18 @@
+environment:
+deployment:
+  name: helm-nginx-deployment
+service:
+  name: helm-nginx-service
+  port: 80
+ingress:
+  name: helm-nginx-ingress
+  host: helm.efc.olst.io
+  port: 80
+app:
+  name: helm-nginx
+  replica: 3
+  containers:
+    nginx:
+      name: nginx
+      port: 80
+      image: nginx
